@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-I${workspaceFolder}/include",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/Board.cpp",
+                "${workspaceFolder}/src/Game.cpp",
+                "${workspaceFolder}/src/Move.cpp",
+                "${workspaceFolder}/src/Engine.cpp",
+                "-o",
+                "${workspaceFolder}/checkers"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
